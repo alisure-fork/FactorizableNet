@@ -30,7 +30,7 @@ import pdb
 
 parser = argparse.ArgumentParser('Options for training Hierarchical Descriptive Model in pytorch')
 
-parser.add_argument('--path_opt', default='options/FN_v4/map_v2.yaml', type=str,
+parser.add_argument('--path_opt', default='options/models/VRD.yaml', type=str,
                     help='path to a yaml options file')
 
 parser.add_argument('--dir_logs', type=str, help='dir logs')
@@ -59,14 +59,14 @@ parser.add_argument('--dropout', type=float, help='Set the dropout rate.')
 
 # model init
 parser.add_argument('--resume', type=str, help='path to latest checkpoint')
-parser.add_argument('--pretrained_model', type=str, help='path to pretrained_model')
+parser.add_argument('--pretrained_model', default="output/trained_models/Model-VRD.h5", type=str, help='path to pretrained_model')
 parser.add_argument('--warm_iters', type=int, default=-1, help='Indicate the model do not need')
 parser.add_argument('--optimize_MPS', action='store_true', help='Only optimize the MPS part')
 parser.add_argument('--start_epoch', default=0, type=int, help='manual epoch number (useful on restarts)')
 parser.add_argument('--save_all_from', type=int,
                     help='''delete the preceding checkpoint until an epoch,'''
                          ''' then keep all (useful to save disk space)')''')
-parser.add_argument('-e', '--evaluate', dest='evaluate', action='store_true',
+parser.add_argument('-e', '--evaluate', dest='evaluate', default=True, action='store_true',
                     help='evaluate model on validation and test set')
 parser.add_argument('--use_normal_anchors', action='store_true', help='Whether to use kmeans anchors')
 

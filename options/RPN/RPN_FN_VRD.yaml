@@ -1,7 +1,7 @@
 # Training Settings
 
 kmeans_anchors: True
-anchor_dir: data/VRD # set
+anchor_dir: /home/ubuntu/data1.5TB/VG/VRD/VRD # set
 
 object:
       train:

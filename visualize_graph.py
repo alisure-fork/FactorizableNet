@@ -22,7 +22,7 @@ import pdb
 
 from PIL import Image 
 
-from eval.evaluator import DenseCaptioningEvaluator
+# from eval.evaluator import DenseCaptioningEvaluator
 
 
 parser = argparse.ArgumentParser('Options for Meteor evaluation')
